@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 import sys
+import websockets
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'temperature_project.settings')
