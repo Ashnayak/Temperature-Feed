@@ -10,7 +10,7 @@ class Command(BaseCommand):
         readings = TemperatureReading.objects.all().order_by('-timestamp')  
 
         for reading in readings:
-            print(f"Temperature: {reading.temperature}°C, Timestamp: {reading.timestamp}")
+            print(f"Temperature: {reading.value}°C, Timestamp: {reading.timestamp}")
 
     def handle(self, *args, **options):
         self.print_temperature_readings()
