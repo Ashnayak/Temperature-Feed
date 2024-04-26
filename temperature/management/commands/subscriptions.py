@@ -1,5 +1,6 @@
 from django.core.management.base import BaseCommand
 import json
+import websockets
 from temperature.models import TemperatureReading
 from datetime import datetime, timezone
 from websocket import create_connection
