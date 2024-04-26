@@ -65,7 +65,7 @@ DATABASES = {
         'NAME': 'temperature_db',  # Database name
         'USER': 'admin',  # PostgreSQL username
         'PASSWORD': 'admin_password',  # PostgreSQL password
-        'HOST': 'db',  # Docker Compose service name for PostgreSQL container
+        'HOST': 'localhost',  # Docker Compose service name for PostgreSQL container
         'PORT': '5432',  # Default PostgreSQL port
     }
 }
