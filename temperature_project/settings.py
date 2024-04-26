@@ -24,7 +24,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'temperature',
+    'graphene_django',
 ]
+
+GRAPHENE = {
+    'SCHEMA': 'temperature.schema.schema' 
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -62,11 +67,11 @@ WSGI_APPLICATION = 'temperature_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'temperature_db',  # Database name
-        'USER': 'admin',  # PostgreSQL username
-        'PASSWORD': 'admin_password',  # PostgreSQL password
-        'HOST': 'localhost',  # Docker Compose service name for PostgreSQL container
-        'PORT': '5432',  # Default PostgreSQL port
+        'NAME': 'temperature_db',  
+        'USER': 'admin',  
+        'PASSWORD': 'admin_password',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 

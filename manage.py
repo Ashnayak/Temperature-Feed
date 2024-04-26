@@ -1,11 +1,6 @@
 #!/usr/bin/env python
 import os
 import sys
-import asyncio
-import json
-import websockets
-# from temperature.models import TemperatureReading 
-
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'temperature_project.settings')
