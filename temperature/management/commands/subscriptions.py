@@ -28,7 +28,7 @@ class Command(BaseCommand):
         print("time=",timestamp)
 
         # Create a new TemperatureReading object and save it to the database
-        temperature_reading = TemperatureReading(temperature=temperature_value, timestamp=timestamp)
+        temperature_reading = TemperatureReading(value=temperature_value, timestamp=timestamp)
         temperature_reading.save()
 
         print("Data saved to PostgreSQL:", data)
