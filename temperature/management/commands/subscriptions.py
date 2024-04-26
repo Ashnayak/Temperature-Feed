@@ -1,8 +1,5 @@
 from django.core.management.base import BaseCommand
-import asyncio
-import websockets
 import json
-from asgiref.sync import sync_to_async
 from temperature.models import TemperatureReading
 from datetime import datetime, timezone
 from websocket import create_connection
@@ -25,7 +22,7 @@ class Command(BaseCommand):
         temperature_value = data['payload']['data']['temperature']
         now_utc = datetime.now(timezone.utc)
 
-        # Format the time with the UTC offset +00:00
+        # Format time with UTC offset +00:00
         timestamp = now_utc.isoformat()
         print("time=",timestamp)
 
@@ -34,20 +31,6 @@ class Command(BaseCommand):
         temperature_reading.save()
 
         print("Data saved to PostgreSQL:", data)
-
-    # async def capture_data(self):
-    #     uri = "ws://localhost:1000/graphql"
-    #     start = {
-    #         "type": "start",
-    #         "payload": {"query": "subscription { temperature }"}
-    #     }
-    #     async with websockets.connect(uri, subprotocols=["graphql-ws"]) as websocket:
-    #         await websocket.send(json.dumps(start))
-    #         while True:
-    #             data = await websocket.recv()
-    #             print("Received data from WebSocket:", data)
-    #             # Here you can add your processing logic
-    #             self.process_data(json.loads(data))
 
     def capture_data(self):
         uri = "ws://localhost:1000/graphql"
@@ -63,11 +46,9 @@ class Command(BaseCommand):
             while True:
                 data = ws.recv()
                 print("Received data from WebSocket:", data)
-                # Here you can add your processing logic
                 self.process_data(json.loads(data))
         finally:
             ws.close()
 
     def handle(self, *args, **options):
-        # asyncio.run(self.capture_data())
         self.capture_data()
