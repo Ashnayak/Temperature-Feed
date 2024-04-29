@@ -74,6 +74,8 @@ query {
   }
 }
 ```
+<img width="1508" alt="Screen Shot 2024-04-25 at 9 55 52 PM" src="https://github.com/Ashnayak/Temperature-Feed/assets/18304940/faf45675-4016-4da7-8e9e-d4d6ca05e3b2">
+
 
 # Testing
 Run the following command to execute automated tests:
