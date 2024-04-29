@@ -75,9 +75,11 @@ query {
 }
 ```
 Data:
+
 <img width="565" alt="Screen Shot 2024-04-25 at 9 52 41 PM" src="https://github.com/Ashnayak/Temperature-Feed/assets/18304940/dfdd770e-96b6-434b-9593-31a0f97f2521">
 
 GraphQL APIs:
+
 <img width="1508" alt="Screen Shot 2024-04-25 at 9 55 52 PM" src="https://github.com/Ashnayak/Temperature-Feed/assets/18304940/faf45675-4016-4da7-8e9e-d4d6ca05e3b2">
 
 
