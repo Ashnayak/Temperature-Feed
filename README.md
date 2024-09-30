@@ -91,3 +91,14 @@ Run the following command to execute automated tests:
 ```
 pytest
 ```
+
+# Appendix
+Database system:
+<img width="1279" alt="Screen Shot 2024-04-24 at 9 17 09 PM" src="https://github.com/user-attachments/assets/f8079ec4-96c4-4326-a755-c8dc258b3ab4">
+
+Data stream:
+<img width="1090" alt="Screen Shot 2024-04-25 at 8 47 47 PM" src="https://github.com/user-attachments/assets/3d2c68fc-d3be-48b3-919f-13a32e700d3e">
+
+
+
+
