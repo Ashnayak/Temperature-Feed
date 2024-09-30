@@ -4,9 +4,12 @@
 This Django project provides a GraphQL API for monitoring and retrieving temperature readings. The application uses Graphene-Django to define and expose GraphQL queries for current temperature data and historical temperature statistics within specified time ranges.
 
 # Features
+- Django app which can store temperature readings (a timestamp and a value) in the database.
+- Subscribe to the temperature feed (see how to set up the temperature feed) to continuously populate the database.
 - Current Temperature Query: Fetch the most recent temperature reading.
 - Temperature Statistics Query: Fetch minimum and maximum temperatures over a specified date range.
 - WebSocket Subscription: Real-time temperature updates (if applicable).
+- A Dockerfile to make the whole setup portable and easy to-use.
 
 # Installation
 
